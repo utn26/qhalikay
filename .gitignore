@@ -1,0 +1,8 @@
+# Dependencias y builds
+node_modules/
+**/node_modules/
+packages/**/dist/
+
+# Capacitor native platforms
+packages/mobile/ios/
+packages/mobile/android/

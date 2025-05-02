@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.2.2"
+  },
+  "scripts": {
+    "dev:web": "lerna run dev --scope=website", 
+    "build:web": "lerna run build --scope=website", 
+    "bootstrap": "lerna bootstrap",
+    "build:mobile": "lerna run build --scope=mobile",
+    "sync:mobile": "lerna exec --scope=mobile -- npx cap sync android",
+    "open:android": "lerna exec --scope mobile -- npx cap open android",
+    "update:android": "yarn run build:web && yarn run sync:mobile && yarn run open:android"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
