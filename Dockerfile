@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Copiamos los archivos de definición de dependencias y configuración de Lerna/Yarn
 COPY package.json yarn.lock lerna.json ./
-COPY packages/website/package.json ./packages/website/
+COPY packages/ ./packages/
 
 # (Opcional pero recomendado si tienes dependencias cruzadas o scripts en otros paquetes que 'website' necesite en tiempo de build)
 # Descomenta la siguiente línea si necesitas copiar otros package.json
