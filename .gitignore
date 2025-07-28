@@ -6,3 +6,5 @@ packages/**/dist/
 # Capacitor native platforms
 packages/mobile/ios/
 packages/mobile/android/
+
+.yarn/*
