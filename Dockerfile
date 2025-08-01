@@ -26,6 +26,8 @@ COPY . .
 # Ejecutamos el script de build específicamente para el paquete 'website'
 # Asegúrate de que tu paquete 'website' tenga un script llamado "build" en su package.json
 # Lerna se encargará de ejecutarlo en el contexto correcto.
+RUN yarn lerna run build --scope=utils
+RUN yarn lerna run build --scope=ui
 RUN yarn lerna run build --scope=website
 
 # ---- Etapa 2: Runner ----

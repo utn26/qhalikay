@@ -1,10 +1,10 @@
 // src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Inicio from './Pages/Inicio';
-import Productos from './Pages/Productos';
-import Paginas from './Pages/Paginas';
-import Usuarios from './Pages/Usuarios';
+import Inicio from './Components/Pages/Auth/Inicio';
+import Productos from './Components/Pages/Auth/Productos';
+import Paginas from './Components/Pages/Auth/Paginas';
+import Usuarios from './Components/Pages/Auth/Usuarios';
 import Navbar from './Components/Navbar';
 
 const App: React.FC = () => {

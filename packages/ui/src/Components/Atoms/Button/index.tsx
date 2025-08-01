@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes, Ref, forwardRef } from 'react';
+import componentClasses from './componentClasses';
 
-interface ButtonProps {
-    onClick: () => void;
-    text: string;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string,
+  onClick: () => void;
+  children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, text }) => {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, className, onClick, ...rest }, ref) => {
     return (
-        <button onClick={onClick}>
-            {text}
-        </button>
+      <button
+        ref={ref}
+        onClick={onClick}
+        className={className + componentClasses}
+        {...rest}
+      >
+        {children}
+      </button>
     );
-};
+  }
+);
 
 export default Button;

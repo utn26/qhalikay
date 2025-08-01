@@ -1,0 +1,37 @@
+// mi-monorepo/packages/utils/tsconfig.json
+{
+  "compilerOptions": {
+    /* Configuración de compilación */
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext", /* Sistema de módulos de destino */
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react-jsx", /* Generar JS con JSX para React */
+    "outDir": "dist", /* Directorio de salida para los archivos JS */
+    "rootDir": "src", /* Directorio raíz de los archivos fuente */
+    "declaration": true, /* Generar archivos de declaración `.d.ts` */
+    "declarationDir": "dist", /* Directorio para los archivos `.d.ts` */
+    "composite": true, /* Habilita la compilación compuesta para proyectos de referencia */
+    /* Configuración de comprobación de tipos */
+    "strict": true, /* Habilita todas las opciones estrictas de comprobación de tipos */
+    "skipLibCheck": true, /* Omite la comprobación de tipos de todos los archivos .d.ts */
+    "noUnusedLocals": true, /* Informa de errores en las variables locales no utilizadas */
+    "noUnusedParameters": true, /* Informa de errores en los parámetros no utilizados */
+    /* Configuración de resolución de módulos */
+    "moduleResolution": "node", /* Estrategia de resolución de módulos */
+    "baseUrl": ".", /* Directorio base para la resolución de módulos no relativos */
+    "esModuleInterop": true, /* Habilita el interoperabilidad de módulos en CommonJS y ES Modules */
+    "forceConsistentCasingInFileNames": true /* Asegura la consistencia en los nombres de archivo y carpetas */
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

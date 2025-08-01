@@ -6,7 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "utils": "1.0.0"
   },
   "scripts": {
     "build": "tsc"
